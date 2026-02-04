@@ -8,7 +8,9 @@ import numpy as np
 
 app = FastAPI()
 
-SECRET_API_KEY = "sk_test_123456789"
+import os
+SECRET_API_KEY = os.getenv("API_KEY")
+
 ALLOWED_LANGUAGES = ["Tamil", "English", "Hindi", "Malayalam", "Telugu"]
 
 class VoiceRequest(BaseModel):
